@@ -31,3 +31,4 @@ Moving to the trainer.py
     recommended one.
 -   DataLoader(pin_memory): pin_memory first copies the Tensors into CUDA pinned
     memory. This speeds up the host-to-device data transfers
+-   CosineLearningRateDecay: A cyclical LR scheduler based on cosine function
