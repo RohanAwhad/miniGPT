@@ -1,4 +1,5 @@
 This is a CopyWork exercise of MinGPT from Andrej Karpathy.
+Original Repo: https://github.com/karpathy/minGPT
 
 ## 18th April, 2022
 
@@ -19,3 +20,14 @@ Continuing the model.py
 -   torch.numel: Returns number of elements in the input
 -   Configuring optimizers to take into account decaying of certain parameters
     only and not all the parameters
+
+## 21st April, 2022
+
+Moving to the trainer.py
+
+-   torch.nn.DataParallel: Parallelization across multiple devices. Stores the
+    model in `module`. Parallelizes across batch dimension. Recommended to use
+    torch.nn.parallel.DistributedDataParallel. I will be updating mine to the
+    recommended one.
+-   DataLoader(pin_memory): pin_memory first copies the Tensors into CUDA pinned
+    memory. This speeds up the host-to-device data transfers
