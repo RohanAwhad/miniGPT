@@ -32,3 +32,15 @@ Moving to the trainer.py
 -   DataLoader(pin_memory): pin_memory first copies the Tensors into CUDA pinned
     memory. This speeds up the host-to-device data transfers
 -   CosineLearningRateDecay: A cyclical LR scheduler based on cosine function
+
+## 25th April, 2022
+
+Now on to the utils.py and play_char.ipynb
+
+-   torch.topk: returns top k items and their indices
+-   temperature: Changes the output distribution. The logits computed from the
+    NN are divided by temperate `T`. This changes the output distribution,
+    making it either hard distribution (model is very confident) or soft
+    distribution (model is less confident). If `T == 1` probabilities remain the
+    same. If your model is extremely confident, it may produce very repetitive
+    and uninteresting text.
